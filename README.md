@@ -30,7 +30,7 @@ docker exec -it mysqldb bash
 mysql -h localhost -u root  -P 3306 -p
 ```
 * To connect with Dbeaver:
-Driver Properties -> publicKeyRetrival=TRUE
+<p>Driver Properties -> publicKeyRetrival=TRUE</p>
 ```Mysql
 UPDATE mysql.user SET Host='%' WHERE Host='localhost' AND User='root';
 UPDATE mysql.db SET Host='%' WHERE Host='localhost' AND User='root';
