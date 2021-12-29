@@ -18,3 +18,19 @@ Army Postponement App, a Spring project in the context of HUA DIT course 'Distri
   <a href="https://www.nginx.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg" alt="nginx" width="40" height="40"/> </a>
   <a href="https://www.mysql.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/mysql/mysql-official.svg" alt="mysql" width="40" height="40"/> </a> 
   <a href="https://angular.io/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/angular/angular-icon.svg" alt="angular" width="40" height="40"/> </a> </p>
+
+## Connect to the database
+* Creating docker container
+```Bash
+docker run --name mysqldb -v mysqldbvol:/var/lib/mysql -p 3306:3306 -e MYSQL_USER=user -e MYSQL_PASSWORD=password -e MYSQL_DATABASE=army_postponent -e MYSQL_ROOT_PASSWORD=password -d mysql/mysql-server:latest
+```
+* Connect to Dadabase
+```Bash
+docker exec -it mysqldb bash
+mysql -h localhost -u root  -P 3306 -p
+```
+* To connect with Dbeaver execute the following lines:
+```Mysql
+UPDATE mysql.user SET Host='%' WHERE Host='localhost' AND User='root';
+UPDATE mysql.db SET Host='%' WHERE Host='localhost' AND User='root';
+```
