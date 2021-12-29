@@ -22,7 +22,7 @@ Army Postponement App, a Spring project in the context of HUA DIT course 'Distri
 ## Connect to the database
 * Creating docker container
 ```Bash
-docker run --name mysqldb -v mysqldbvol:/var/lib/mysql -p 3306:3306 -e MYSQL_USER=user -e MYSQL_PASSWORD=password -e MYSQL_DATABASE=army_postponent -e MYSQL_ROOT_PASSWORD=password -d mysql/mysql-server:latest
+docker run --name mysqldb -v mysqldbvol:/var/lib/mysql -p 3306:3306 -e MYSQL_USER=admin -e MYSQL_PASSWORD=password -e MYSQL_DATABASE=army -e MYSQL_ROOT_PASSWORD=password -d mysql/mysql-server:latest
 ```
 * Connect to Dadabase
 ```Bash
