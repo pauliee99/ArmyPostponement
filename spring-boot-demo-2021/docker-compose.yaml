@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  db:
+    image: "mysql/mysql-server:latest"
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_USER=hbstudent
+      - MYSQL_PASSWORD=changeit
+      - MYSQL_DATABASE=students
+      - MYSQL_ROOT_PASSWORD=pass123
+    volumes:
+      - ./assets/db:/docker-entrypoint-initdb.d
+      - mysqldbvol:/var/lib/mysql
+
+volumes:
+  mysqldbvol:

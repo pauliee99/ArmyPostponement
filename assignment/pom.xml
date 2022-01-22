@@ -70,24 +70,24 @@
 <!--			<artifactId>spring-orm</artifactId>-->
 <!--		</dependency>-->
 
-		<!-- Hibernate Core -->
-<!--		<dependency>-->
-<!--			<groupId>org.hibernate</groupId>-->
-<!--			<artifactId>hibernate-core</artifactId>-->
-<!--		</dependency>-->
+		 Hibernate Core
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+		</dependency>
 
-		<!-- Hibernate-C3P0 Integration -->
-<!--		<dependency>-->
-<!--			<groupId>org.hibernate</groupId>-->
-<!--			<artifactId>hibernate-c3p0</artifactId>-->
-<!--		</dependency>-->
+		 Hibernate-C3P0 Integration
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+		</dependency>
 
-		<!-- c3p0 -->
-<!--		<dependency>-->
-<!--			<groupId>com.mchange</groupId>-->
-<!--			<artifactId>c3p0</artifactId>-->
-<!--			<version>0.9.5.2</version>-->
-<!--		</dependency>-->
+		 c3p0
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.5.2</version>
+		</dependency>
 
 		<dependency>
 			<groupId>mysql</groupId>
@@ -113,15 +113,11 @@
 		<!--			<artifactId>spring-security-web</artifactId>-->
 		<!--		</dependency>-->
 
-		<!--		<dependency>-->
-		<!--			<groupId>org.springframework.security</groupId>-->
-		<!--			<artifactId>spring-security-config</artifactId>-->
-		<!--		</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
 
-		<!--		<dependency>-->
-		<!--			<groupId>org.springframework.security</groupId>-->
-		<!--			<artifactId>spring-security-taglibs</artifactId>-->
-		<!--		</dependency>-->
 
 		<dependency>
 			<groupId>javax.servlet</groupId>
