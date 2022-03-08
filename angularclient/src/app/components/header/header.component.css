@@ -1,0 +1,9 @@
+.container {
+    max-width: 700px;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 400px;
+    /* border: 1px solid steelblue; */
+    padding: 80px;
+    border-radius: 5px;
+  }

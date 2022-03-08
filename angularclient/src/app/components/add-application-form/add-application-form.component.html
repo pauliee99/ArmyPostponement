@@ -1,0 +1,24 @@
+<div id="overlay" onclick="off()">
+  <div id="form" >
+    <form class="add-form" (ngSubmit)="onSubmit()">
+      <div class="form-control">
+        <label for="name" id="namelabel">Name:</label><br>
+        <input type="text" [(ngModel)]="nametext" id="nametext" name="nametext" placeholder="Name of the Application"><br>
+      </div>
+      <div class="form-control">
+        <label for="reason" id="reasonlabel">reason for postponement:</label><br>
+        <select name="reason" id="reasons">
+          <option value="" selected disabled hidden>Choose here</option>
+          <option value="volvo">studies</option>
+          <option value="saab">medical purposes</option>
+        </select>
+        <br><br>
+      </div>
+      <div class="form-control">
+        <label for="comment">comment:</label><br>
+        <textarea [(ngModel)]="commenttext" name="commenttext" placeholder="Type your comment here..."></textarea><br><br>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.application {
+    background: #f4f4f4;
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .application h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+#date {
+  font-size: 15px;
+  color: rgba(58, 58, 58, 0.815);
+}
+#eye {
+  color: grey;
+  font-size: 20px;
+}
+#eye:hover {
+  color: black;
+}
+.reason{
+  margin-left: 2.8em
+}
+.status{
+  margin-left: 18em
+}

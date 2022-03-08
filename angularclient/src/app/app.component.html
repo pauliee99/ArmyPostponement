@@ -1,0 +1,88 @@
+<!--title -->
+<div class="toolbar" role="banner">
+<img
+    class="img"
+    width="40"
+    alt="Logo"
+    src="https://upload.wikimedia.org/wikipedia/el/d/dc/Cypriot_National_Guard_emblem.png"
+/>
+<span class="welcome" href="location.href='http://www.boredapi.com/api/activity/';" style="cursor: pointer;">ARMY POSTPONEMENT</span>
+    <div class="spacer"></div>
+<!--  <p>{{applications[0].userIn.firstname}} + {{applications[0].userIn.lastname}}</p>-->
+  <div class ="nav nav-roles">
+    <input [(ngModel)]="role" type="radio" id="politis" class="role" name="role" value="ROLE_POLITIS">Πολίτης
+    <input [(ngModel)]="role" type="radio" id="ypallilos" class="role" name="role" value="ROLE_YPALLILOS">Υπάλληλος
+    <input [(ngModel)]="role" type="radio" id="officer" class="role" name="role" value="ROLE_OFFICER">Αξιωματικός
+  </div>
+  <ul class="nav nav-pills">
+    <li><a routerLinkActive="active" routerLink="/login" (click)="roleSelect()">Login</a></li> <!--(click)="openLoginForm()"-->
+    <li><a  routerLinkActive="/logout" routerLink="/logout">LogOut</a></li>
+  </ul>
+
+</div>
+<div>
+<!--  <app-header></app-header>-->
+  <li><a class="headeralt" routerLinkActive="active" routerLink="/postponements" ></a></li>
+</div>
+
+<router-outlet></router-outlet>
+<br>
+
+
+
+
+<footer>
+  <table style="width:100%">
+    <tr>
+      <th>
+        Andreou Pavlos it218110 <br>
+        Efstratios Orfanos it21875 <br>
+        Distributed System Assignement, Army Postponement <br>
+        Harokopio, University of Athens
+      </th>
+      <th>
+        <img
+          class="img"
+          width="40"
+          alt="Logo"
+          src="https://upload.wikimedia.org/wikipedia/el/d/dc/Cypriot_National_Guard_emblem.png"
+        />
+      </th>
+      <th>
+        <img
+          class="img"
+          width="40"
+          alt="Logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Coat_of_arms_of_Greece_%28military%29.svg/120px-Coat_of_arms_of_Greece_%28military%29.svg.png"
+        />
+      </th>
+      <th>
+        <img
+          class="img"
+          width="40"
+          alt="Logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/125px-Flag_of_Greece.svg.png"
+        />
+      <th>
+        <img
+          class="img"
+          width="40"
+          alt="Logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Cyprus_%282006%29.svg/85px-Coat_of_arms_of_Cyprus_%282006%29.svg.png"
+        />
+      </th>
+      <th>
+        <img
+          class="img"
+          width="40"
+          alt="Logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/6/63/Harokopio_University_Logo.png"
+        />
+      </th>
+    </tr>
+    <tr>
+
+    </tr>
+  </table>
+
+</footer>

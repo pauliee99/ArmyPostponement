@@ -1,0 +1,28 @@
+<form class="add-form" (ngSubmit)="onSubmit()">
+<!--    <div class="form-control">-->
+<!--      <label for="name" id="namelabel">Name:</label><br>-->
+<!--      <input type="text" [(ngModel)]="nametext" id="nametext" name="nametext" placeholder="Name of the Application"><br>-->
+<!--    </div>-->
+    <h1>Εισαγωγή νέας Αίτησης</h1>
+    <div class="form-control">
+      <label for="reason" id="reasonlabel">reason for postponement:</label><br>
+      <select name="reason" id="reasons" [(ngModel)]="reasonsopt">
+        <option value="" selected disabled hidden>Choose here</option>
+        <option value="studies">studies</option>
+        <option value="medical purposes">medical purposes</option>
+      </select>
+      <br><br>
+    </div>
+    <div class="form-control">
+      <label for="comment">Comments:</label><br>
+      <textarea [(ngModel)]="commenttext" name="commenttext" placeholder="Type your comment here..."></textarea><br><br>
+    </div>
+    <div class="field">
+      <app-file-upload></app-file-upload>
+<!--      <label>file:</label>-->
+<!--      <input type="file" name="file" [(ngModel)]="file" placeholder="Upload file" accept=".pdf,.doc,.docx" observeFiles />-->
+    </div>
+<!--    <input type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".pdf,.doc,.docx">-->
+    <input type="submit" value="Καταχώρηση" >
+  </form>
+<!-- (click)="closeDialog()" -->

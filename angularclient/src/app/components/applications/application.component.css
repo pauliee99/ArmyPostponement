@@ -1,0 +1,10 @@
+p{
+  position: fixed;
+  top: 60px;
+  right: 16px;
+  margin: 0;
+  padding: 0;
+}
+h1{
+  font-weight: bold;
+}

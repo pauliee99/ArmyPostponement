@@ -1,0 +1,52 @@
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#form {
+    background-color:rgb(253, 255, 147);
+    text-align: left;
+    max-width: 700px;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 400px;
+    border: 1px solid steelblue;
+    padding: 80px;
+    border-radius: 5px;
+    z-index: 3;
+}
+
+label {
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }

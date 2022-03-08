@@ -1,0 +1,74 @@
+<form class="add-form" *ngIf="data"> <!--(ngSubmit)="onSubmit()"-->
+  <h1>Προβολή Αίτησης</h1>
+  <mat-dialog-content>
+    <div class="form-control">
+      <label for="id" id="id">Id: <input type="text" value={{id}} disabled=true></label>
+    </div>
+    <div class="form-control">
+      <label for="date" id="date">Date: <input type="value" value={{date}} disabled=true></label>
+    </div>
+    <div class="form-control">
+      <label for="reason" id="reason">Reason: <input type="value" value={{reason}} disabled=true></label>
+    </div>
+    <div class="form-control">
+      <label for="status" id="status">Status: <input type="value" value={{status}} disabled=true></label>
+    </div>
+    <div class="form-control">
+      <label for="office" id="office">Office: <input type="value" value={{office}} disabled=true></label>
+    </div>
+    <div class="form-control">
+      <label for="userIn" id="userIn" *ngIf="userIn==null; else elseBlockuserin">UserIn: <input type="value" value="N/A" disabled=true></label>
+      <ng-template #elseBlockuserin>
+        <label>userIn: <input type="value" value={{userIn}} disabled=true></label>
+      </ng-template>
+    </div>
+    <div class="form-control">
+      <label for="commentIn" id="commentIn" default="xxx" *ngIf="commentIn==null; else elseBlockcommentin">CommentIn: <input type="value" value="N/A" disabled=true></label>
+      <ng-template #elseBlockcommentin><label>CommentIn: <input type="value" value={{commentIn}} disabled=true style="width: 500px;"></label></ng-template>
+    </div>
+    <div class="form-control">
+      <label for="userValid" id="userValid" *ngIf="userValid==null; else elseBlockuservalid">UserValid: <input type="value" value="N/A" disabled=true></label>
+      <ng-template #elseBlockuservalid><label>userValid: <input type="value" value={{userValid}} disabled=true></label></ng-template>
+    </div>
+    <div class="form-control">
+      <label for="commentValid" id="commentValid" *ngIf="commentValid==null; else elseBlockcommentvalid">CommentValid: <input type="value" value="N/A" disabled=true></label>
+      <ng-template #elseBlockcommentvalid><label>commentValid: <input type="value" value={{commentValid}} disabled=true style="width: 500px;"></label></ng-template>
+    </div>
+    <div class="form-control">
+      <label for="userApproved" id="userApproved" *ngIf="userApproved==null; else elseBlockuserappr">UserApproved: <input type="value" value="N/A" disabled=true></label>
+      <ng-template #elseBlockuserappr><label>userApproved: <input type="value" value={{userApproved}} disabled=true></label></ng-template>
+    </div>
+    <div class="form-control">
+      <label for="commentApproved" id="commentApproved" *ngIf="commentApproved==null; else elseBlockcommentappr">CommentApproved: <input type="value" value="N/A" disabled=true></label>
+      <ng-template #elseBlockcommentappr><label>commentApproved: <input type="value" value={{commentApproved}} disabled=true style="width: 500px;"></label></ng-template>
+    </div>
+  </mat-dialog-content>
+  <hr>
+  <br>
+  <mat-dialog-actions>
+    <h2>Διαθέσιμες Ενέργειες</h2>
+    <div class="form-control">
+      <label for="comments">Action:</label><br>
+      <textarea [(ngModel)]="commenttext" name="commenttext" placeholder="add a comment..."></textarea><br><br> <!-- {{commenttext}}-->
+    </div>
+    <button class="inputs" value="cancel" (click)="onCancel()" style="background-color: red; font-weight: bold;" *ngIf="role=='ROLE_POLITIS'">Cancel</button> <br> <!--type="submit" -->
+    <button class="valid" (click)="onValid()" style="background-color: green; font-weight: bold" *ngIf="role=='ROLE_YPALLILOS'">Valid</button><button class="notvalid" (click)="onNotValid()" style="background-color: red; font-weight: bold" *ngIf="role=='ROLE_YPALLILOS'">Not Valid</button><br>
+    <button class="approve" (click)="onApprove()" style="background-color: green; font-weight: bold" *ngIf="role=='ROLE_OFFICER'">Approve</button><button class="reject" (click)="onReject()" style="background-color: red; font-weight: bold" *ngIf="role=='ROLE_OFFICER'">Reject</button><br>
+  </mat-dialog-actions>
+</form>
+<!--<form class="add-form" (ngSubmit)="onSubmit()" *ngIf="data">-->
+<!--  <div class="form-control">-->
+<!--    <label for="reason" id="reasonlabel">reason for postponement:</label><br>-->
+<!--    <select name="reason" id="reasons" [(ngModel)]="reasonsopt">-->
+<!--      <option value="" selected disabled hidden>Choose here</option>-->
+<!--      <option value="studies">studies</option>-->
+<!--      <option value="medical purposes">medical purposes</option>-->
+<!--    </select>-->
+<!--    <br><br>-->
+<!--  </div>-->
+<!--  <div class="form-control">-->
+<!--    <label for="note">Comments:</label><br>-->
+<!--    <textarea [(ngModel)]="commenttext" name="commenttext" placeholder={{commenttext}}></textarea><br><br>-->
+<!--  </div>-->
+<!--  <input type="submit" value="Submit" >-->
+<!--  </form>-->

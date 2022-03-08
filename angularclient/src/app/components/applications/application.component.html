@@ -1,0 +1,9 @@
+<app-add-btn (onAddNote)="addPostponement($event)" *ngIf="roleCheck()"></app-add-btn>
+<app-add-note-form (onAddNote)="addPostponement($event)"></app-add-note-form>
+<!-- addNote($event) -->
+<!-- toggleAddNote() -->
+<p>{{applications[0].userIn.firstname}} {{applications[0].userIn.lastname}}</p>
+<h1 *ngIf="roleCheck() else elseBlock">Οι αιτήσεις σας</h1>
+<ng-template #elseBlock><h1>Οι αιτήσεις του γραφείου σας</h1></ng-template>
+<app-application-item *ngFor="let application of applications" [application]="application" (onUpdateApplication)="updateApplication($event)"></app-application-item>
+<!--<app-note-item *ngFor="let application of applications" [application]="application" (onDeleteNote)="deleteNote(application)" (onUpdateNote)="updateApplication($event)"></app-note-item>-->

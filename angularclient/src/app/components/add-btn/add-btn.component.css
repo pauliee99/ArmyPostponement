@@ -1,0 +1,66 @@
+.add {
+    position:absolute;
+    right: 100px;
+    top: 300px;
+}
+    
+.addbutton {
+    width: 56px;
+    height: 56px;
+    position: fixed;
+    border-radius: 50%;
+    /*border: 2px solid #fff;*/
+    background-color: rgb(85, 85, 85);
+    margin: 30vh auto;
+    cursor: pointer;
+    z-index: 2;
+}
+.before,
+.after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: white;
+    border-radius: 0;
+    top: 27px;
+    -webkit-transition: 150ms ease-out;
+    -moz-transition: 150ms ease-out;
+    -o-transition: 150ms ease-out;
+    transition: 150ms ease-out;
+    z-index: 0;
+}
+.before {
+    left: 7px;
+}
+.after {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    right: 7px;
+}
+.addbutton:hover { /*extra*/
+    border: 1px solid #717171;
+    padding-bottom: 1px;
+}
+.addbutton:hover .before {
+    -ms-transform: rotate(225deg);/*extra*/
+    -webkit-transform: rotate(225deg);/*extra*/
+    -moz-transform: rotate(225deg);/*extra*/
+    transform: rotate(225deg);
+    -webkit-transition: 300ms ease-in-out all;/*extra*/
+    -moz-transition: 300ms ease-in-out all;/*extra*/
+    -o-transition: 300ms ease-in-out all;/*extra*/
+    transition: 300ms ease-in-out all;
+
+}
+.addbutton:hover .after {
+    -ms-transform: rotate(-225deg);
+    -webkit-transform: rotate(-225deg);
+    -moz-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+    -webkit-transition: 250ms ease-in all;
+    -moz-transition: 250ms ease-in all;
+    -o-transition: 250ms ease-in all;
+    transition: 250ms ease-in all;
+}

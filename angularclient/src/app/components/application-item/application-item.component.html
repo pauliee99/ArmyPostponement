@@ -1,0 +1,6 @@
+<div class="application" (click)="onUpdate(application)">
+  <h3><p id="name">Αιτών: {{application.userIn.firstname}} {{application.userIn.lastname}}</p> <p id="date">Ημερομηνία καταχώρησης: {{ dateFormat(application.time) }}</p> <fa-icon id="eye" [icon]="faEye"></fa-icon></h3> <!--onclick="event.stopPropagation()" (click)="onCancel(application)"  [icon]="faTimes"-->
+  <p class="id" style="display:inline">Id: {{application.id}}</p>
+  <p class="reason" style="display:inline">Reason: {{application.reasonDescr}}</p>
+  <p class="status" style="display:inline">Status: {{statusCode(application.status)}}</p>
+</div>

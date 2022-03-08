@@ -1,0 +1,53 @@
+.welcome {
+    /*font-family:'Brush Script MT';*/
+    font-family: "Stencil Std", "fantasy", serif;
+    font-size:35px;
+    position:relative;
+    left: 20px;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+}
+.add {
+    position:relative;
+    left: 1100px;
+    top: 550px;
+}
+.img {
+    position:relative;
+    left: 10px;
+}
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1e520e;
+  color: white;
+  font-weight: 600;
+}
+.spacer{
+  flex-grow: 0.99;
+}
+.nav nav-pills{
+  position: relative;
+  left: -5px;
+  color: black;
+}
+router-outlet{
+  position:relative;
+  left:80px;
+  top:300px;
+  bottom: 10px;
+}
+footer{
+  /*border-width: 1px;*/
+  background-color: lightgray;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
