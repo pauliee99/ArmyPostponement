@@ -32,4 +32,4 @@ mysql -h localhost -u root  -P 3306 -p
 * To connect with Dbeaver:<br />
 Driver Properties -> publicKeyRetrival=TRUE
 
-* MYSql script to create tha database:
+* MYSql script to create tha database: `assets/db`
