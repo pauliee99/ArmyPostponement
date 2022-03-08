@@ -32,4 +32,7 @@ mysql -h localhost -u root  -P 3306 -p
 * To connect with Dbeaver:<br />
 Driver Properties -> publicKeyRetrival=TRUE
 
-* MYSql script to create tha database: `assets/db`
+* MYSql script to create tha database: `assets/db`  
+
+* Start Spring-Boot Backend server: `mvn spring-boot:run`  
+* Start Angular Frondend server: `cd angularclient/ && ng serve -o`
