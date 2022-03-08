@@ -33,27 +33,3 @@ mysql -h localhost -u root  -P 3306 -p
 Driver Properties -> publicKeyRetrival=TRUE
 
 * MYSql script to create tha database:
-```
-CREATE DATABASE IF NOT EXISTS `army_postponement`;
-USE `army_postponement`;
-
---
--- Table structure for table `user`
---
-
-DROP TABLE IF EXISTS `user`;
-
-CREATE TABLE `user` (
- `id` int(11) NOT NULL AUTO_INCREMENT,
- `first_name` varchar(45) DEFAULT NULL,
- `last_name` varchar(45) DEFAULT NULL,
- `asm` INTEGER(10) DEFAULT NULL,
- `password` varchar(45) DEFAULT NULL,
- `role` tinyint(1) DEFAULT NULL,
- PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
-
-INSERT INTO user (id, first_name, last_name, asm, password, role) 
-	VALUES (1, 'pavlos', 'andreou', 123, '123e', 1)
- ```
-
